@@ -1,4 +1,4 @@
-import { Meta, StoryFn } from "@storybook/vue3";
+import type { Meta, StoryFn } from "@storybook/vue3";
 import Button from "../components/Button.vue";
 
 // Define the metadata for the Button component story
