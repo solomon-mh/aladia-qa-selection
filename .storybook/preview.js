@@ -1,11 +1,13 @@
-// .storybook/preview.js
+/** @type { import('@storybook/vue3').Preview } */
+const preview = {
+  parameters: {
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/i,
+      },
+    },
+  },
+};
 
-import { setup } from "@storybook/vue3";
-
-setup((app) => {
-	app.use(MyPlugin);
-	app.component("my-component", MyComponent);
-	app.mixin({
-		/* My mixin */
-	});
-});
+export default preview;

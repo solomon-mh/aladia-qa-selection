@@ -1,15 +1,11 @@
-import type { Preview } from "@storybook/vue3";
+// Replace your-framework with the name of your framework
+import { fn } from "@storybook/test";
+import { Button, Meta } from "../.nuxt/components";
 
-const preview: Preview = {
-  parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
-      },
-    },
-  },
+const meta: Meta<typeof Button> = {
+	component: Button,
+	// 👇 Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked
+	args: { onClick: fn() },
 };
 
-export default preview;
+export default meta;
