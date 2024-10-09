@@ -5,7 +5,7 @@
 		<div>
 			<!-- sign-up header Section -->
 			<div
-				class="flex mx-auto h-32 justify-center border-[1px] rounded border-gray-700 items-center"
+				class="login-header flex mx-auto h-32 justify-center border-[1px] rounded border-gray-700 items-center"
 			>
 				<div class="flex-1">
 					<img
@@ -53,9 +53,11 @@
 						</div>
 					</div>
 					<div
-						class="relative flex h-10 w-full items-center justify-center overflow-hidden rounded-md border-white/100 bg-black text-center text-sm pointer-events-none opacity-70 border"
+						class="relative login-header flex h-10 w-full items-center justify-center overflow-hidden rounded-md border-white/100 bg-black text-center text-sm pointer-events-none opacity-70 border"
 					>
-						<div class="gradient absolute inset-0 opacity-50"></div>
+						<div
+							class="gradient absolute inset-0 opacity-50 bg-gradient-to-br from-white/30 to-black/90 shadow-inner"
+						></div>
 						<div class="text-white" @click="">Enter</div>
 					</div>
 					<div class="or-card flex items-center">
@@ -103,3 +105,11 @@
 		</div>
 	</div>
 </template>
+<style>
+.login-header {
+	background: url("../assets/bg/bg.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	object-fit: cover;
+}
+</style>
