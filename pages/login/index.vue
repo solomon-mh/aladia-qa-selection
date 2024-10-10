@@ -40,7 +40,7 @@ import Input from "~/components/atoms/Input.vue";
 				<h1 class="font-semibold text-slate-400 mb-2 text-[14px]">
 					Enter your details
 				</h1>
-				<form class="flex flex-col w-[92%] max-w-md gap-6">
+				<form @submit.prevent class="flex flex-col w-[92%] max-w-md gap-6">
 					<Input
 						class="h-full flex-1 rounded bg-transparent text-sm text-black outline-none transition-all"
 						icon="fa-solid fa-user"
@@ -78,7 +78,7 @@ import Input from "~/components/atoms/Input.vue";
 						placeholder="Confirm Password"
 						type="text"
 					/>
-					<SubmitButton button-text="Enter" />
+					<SubmitButton button-text="Enter" path="/login/verification" />
 				</form>
 			</div>
 		</div>
@@ -86,7 +86,7 @@ import Input from "~/components/atoms/Input.vue";
 </template>
 <style>
 .login-header {
-	background: url("../../assets/bg/bg.png");
+	background: url("/bg/bg.png");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	object-fit: cover;

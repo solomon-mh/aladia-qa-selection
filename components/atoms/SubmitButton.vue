@@ -50,6 +50,10 @@ export default {
 			type: String,
 			default: "medium", // Default size
 		},
+		path: {
+			type: String,
+			default: "/",
+		},
 	},
 	computed: {
 		sizeClass() {
@@ -62,7 +66,8 @@ export default {
 	},
 	methods: {
 		handleClick(event) {
-			this.onClick(event); // Call the onClick prop function
+			this.onClick(event);
+			this.$router.push(this.path);
 		},
 	},
 };
@@ -80,20 +85,20 @@ export default {
 }
 
 .size-small {
-	height: 30px; /* Adjust height for small size */
-	padding: 0 10px; /* Adjust padding for small size */
-	font-size: 0.875rem; /* Smaller font size */
+	height: 30px;
+	padding: 0 10px;
+	font-size: 0.875rem;
 }
 
 .size-medium {
-	height: 40px; /* Adjust height for medium size */
-	padding: 0 15px; /* Adjust padding for medium size */
-	font-size: 1rem; /* Default font size */
+	height: 40px;
+	padding: 0 15px;
+	font-size: 1rem;
 }
 
 .size-large {
-	height: 50px; /* Adjust height for large size */
-	padding: 0 20px; /* Adjust padding for large size */
-	font-size: 1.125rem; /* Larger font size */
+	height: 50px;
+	padding: 0 20px;
+	font-size: 1.125rem;
 }
 </style>

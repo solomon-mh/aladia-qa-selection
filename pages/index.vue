@@ -20,7 +20,7 @@ import Header from "~/components/organisms/Header.vue";
 				<h1 class="font-semibold text-slate-300 mb-2 text-[14px]">
 					Enter Your Email
 				</h1>
-				<form class="flex flex-col w-[92%] max-w-md gap-6">
+				<form @submit.prevent class="flex flex-col w-[92%] max-w-md gap-6">
 					<Input
 						class="h-full flex-1 rounded bg-transparent text-sm text-black outline-none transition-all"
 						icon="fa-solid fa-envelope"
@@ -28,7 +28,7 @@ import Header from "~/components/organisms/Header.vue";
 						placeholder="Enter Your Address"
 						type="text"
 					/>
-					<SubmitButton button-text="Test" />
+					<SubmitButton button-text="Enter" path="/login" />
 				</form>
 				<div class="or-card mt-3 flex items-center">
 					<div class="mb-4 flex items-center justify-between gap-4">
@@ -51,7 +51,7 @@ import Header from "~/components/organisms/Header.vue";
 </template>
 <style>
 .login-header {
-	background: url("../assets/bg/bg.png");
+	background: url("/bg/bg.png");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	object-fit: cover;

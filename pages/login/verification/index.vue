@@ -16,7 +16,7 @@ import SubmitButton from "~/components/atoms/SubmitButton.vue";
 						height="300"
 						imgClasses="w-44 h-auto mx-auto m-0"
 					/>
-					<p>Solomon Muhye</p>
+					<p class="text-xl my-2">Solomon Muhye</p>
 					<p>Thanks For Joining Us</p>
 				</div>
 			</div>
@@ -69,7 +69,7 @@ import SubmitButton from "~/components/atoms/SubmitButton.vue";
 </template>
 <style>
 .login-header {
-	background: url("../../assets/bg/bg.png");
+	background: url("/bg/bg.png");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	object-fit: cover;
