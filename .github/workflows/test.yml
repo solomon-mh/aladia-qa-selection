@@ -1,8 +1,11 @@
 name: Test
 on:
+  push:
+    branches:
+      - "Solomon-Muhye" # Run tests when code is pushed to your individual branch
   pull_request:
     branches:
-      - "**"
+      - "**" # Continue running tests on pull requests for all branches
 
 jobs:
   test:
@@ -17,22 +20,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: "yarn"
+          node-version: "20"
+          cache: "pnpm"
           cache-dependency-path: |
-            yarn.lock
+            pnpm-lock.yaml
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
-      
+        run: pnpm install --frozen-lockfile
+
       - name: Run Cypress E2E Tests on Storybook
         uses: cypress-io/github-action@v5
         with:
-          build: yarn build-storybook
-          start: yarn storybook
+          build: pnpm build-storybook
+          start: pnpm storybook
           config-file: cypress.json
           browser: chrome
-          wait-on: 'http://localhost:6006'
+          wait-on: "http://localhost:6006"
 
       - name: Cypress run
-        run: yarn cy:run
+        run: pnpm cy:run
