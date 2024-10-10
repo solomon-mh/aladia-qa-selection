@@ -1,5 +1,4 @@
-import LoginButton from "../components/LoginButton.vue";
-
+import LoginButton from "../components/atoms/LoginButton.vue";
 export default {
 	title: "Components/LoginButton",
 	component: LoginButton,

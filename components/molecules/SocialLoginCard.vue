@@ -1,17 +1,17 @@
 <template>
 	<div class="mb-8 flex w-full flex-col gap-4">
-		<SocialLoginButton
-			icon="~/assets/brand/google.svg"
+		<AtomsSocialLoginButton
+			icon="/brand/google.svg"
 			text="Continue with Google"
 			link="/google-login"
 		/>
-		<SocialLoginButton
-			icon="~/assets/brand/fb.svg"
+		<AtomsSocialLoginButton
+			icon="/brand/fb.svg"
 			text="Continue with Facebook"
 			link="/facebook-login"
 		/>
-		<SocialLoginButton
-			icon="~/assets/brand/apple.svg"
+		<AtomsSocialLoginButton
+			icon="/brand/apple.svg"
 			text="Continue with Apple"
 			link="/apple-login"
 		/>

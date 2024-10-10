@@ -2,14 +2,18 @@
 	<div
 		class="login-header-bg bg-opacity-25 flex mx-auto h-32 justify-center border-[1px] rounded border-gray-700 items-center"
 	>
-		<Logo />
-		<WelcomeMsg />
+		<AtomsLogo
+			src="/logo/logo.png"
+			alt="Custom Logo"
+			width="100"
+			height="100"
+			imgClasses="w-24 h-24"
+		/>
+		<AtomsWelcomeMsg />
 	</div>
 </template>
 
 <script>
-import WelcomeMsg from "./WelcomeMsg.vue";
-
 export default {
 	name: "Header",
 };

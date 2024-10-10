@@ -1,4 +1,12 @@
-<template class="bg-gradient-to-t from-[#181818] to-[#211f1f]">
+<script setup lang="ts">
+import SocialLoginCard from "../components/molecules/SocialLoginCard.vue";
+import SubmitButton from "../components/atoms/SubmitButton.vue";
+import TermsConditions from "../components/atoms/TermsConditions.vue";
+import Input from "~/components/atoms/Input.vue";
+import Header from "~/components/organisms/Header.vue";
+</script>
+
+<template>
 	<div
 		class="flex flex-col mt-8 h-[40rem] w-[26rem] py-3 mx-auto justify-center items-center border-[1px] border-y-gray-500 rounded p-[20px]"
 	>
@@ -13,8 +21,14 @@
 					Enter Your Email
 				</h1>
 				<form class="flex flex-col w-[92%] max-w-md gap-6">
-					<EmailInput />
-					<SubmitButton />
+					<Input
+						class="h-full flex-1 rounded bg-transparent text-sm text-black outline-none transition-all"
+						icon="fa-solid fa-envelope"
+						autocomplete="off"
+						placeholder="Enter Your Address"
+						type="text"
+					/>
+					<SubmitButton button-text="Test" />
 				</form>
 				<div class="or-card mt-3 flex items-center">
 					<div class="mb-4 flex items-center justify-between gap-4">

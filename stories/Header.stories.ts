@@ -1,19 +1,25 @@
-import { Meta, Story } from "@storybook/vue3";
-import Header from "./Header.vue";
+import type { Meta, StoryObj } from "@storybook/vue3";
+import Header from "../components/organisms/Header.vue";
 
-export default {
-	title: "Components/Header",
+const meta: Meta<typeof Header> = {
+	title: "Components/Organisms/Header",
 	component: Header,
-} as Meta;
+	tags: ["autodocs"],
+	argTypes: {
+		title: { control: "text" },
+		// Add any other props you want to control here
+	},
+	args: {
+		title: "Header Title", // Default prop values
+	},
+};
 
-const Template: Story = (args, { argTypes }) => ({
-	components: { Header },
-	props: Object.keys(argTypes),
-	template: '<Header v-bind="$props" />',
-});
+export default meta;
+type Story = StoryObj<typeof Header>;
 
-export const Default = Template.bind({});
-Default.args = {
-	// Add default props here
-	title: "Header Title",
+// Default Story
+export const Default: Story = {
+	args: {
+		title: "Header Title",
+	},
 };

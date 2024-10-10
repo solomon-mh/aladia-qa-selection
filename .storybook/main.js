@@ -1,7 +1,7 @@
 /** @type { import('@storybook/vue3-vite').StorybookConfig } */
 const config = {
 	stories: [
-		"../stories/**/*.mdx",
+		// "../stories/**/*.mdx",
 		"../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
 	],
 	addons: [
@@ -17,7 +17,7 @@ const config = {
 	},
 	core: {
 		builder: {
-			name: "@storybook/builder-webpack5",
+			name: "@storybook/builder-vite",
 			options: {
 				fsCache: true,
 				lazyCompilation: true,

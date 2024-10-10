@@ -1,18 +1,24 @@
-import { Meta, Story } from "@storybook/vue3";
-import WelcomeMsg from "./WelcomeMsg.vue";
+import type { Meta, StoryObj } from "@storybook/vue3";
+import WelcomeMsg from "../components/atoms/WelcomeMsg.vue";
 
-export default {
+const meta: Meta<typeof WelcomeMsg> = {
 	title: "Components/WelcomeMsg",
 	component: WelcomeMsg,
-} as Meta;
+	tags: ["autodocs"],
+	argTypes: {
+		message: { control: "text" }, // Add any other props you want to control here
+	},
+	args: {
+		message: "Welcome to Nuxt Storybook!", // Default prop values
+	},
+};
 
-const Template: Story = (args, { argTypes }) => ({
-	components: { WelcomeMsg },
-	props: Object.keys(argTypes),
-	template: '<WelcomeMsg v-bind="$props" />',
-});
+export default meta;
+type Story = StoryObj<typeof WelcomeMsg>;
 
-export const Default = Template.bind({});
-Default.args = {
-	message: "Welcome to Nuxt Storybook!",
+// Default Story
+export const Default: Story = {
+	args: {
+		message: "Welcome to Nuxt Storybook!",
+	},
 };

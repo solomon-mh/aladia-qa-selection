@@ -1,18 +1,80 @@
-import { Meta, Story } from "@storybook/vue3";
-import Logo from "./Logo.vue";
-
+import Logo from "../components/atoms/Logo.vue";
 export default {
-	title: "Components/Logo",
+	title: "Components/Atoms/Logo",
 	component: Logo,
-} as Meta;
+	argTypes: {
+		src: {
+			control: "text",
+			description: "Source of the image file.",
+			defaultValue: "/logo/logo.png",
+			table: {
+				type: { summary: "string" },
+				defaultValue: { summary: "/logo/logo.png" },
+			},
+		},
+		alt: {
+			control: "text",
+			description: "Alternative text for the image.",
+			defaultValue: "logo",
+			table: {
+				type: { summary: "string" },
+				defaultValue: { summary: "logo" },
+			},
+		},
+		width: {
+			control: "number",
+			description: "Width of the image (in pixels).",
+			defaultValue: 160,
+			table: {
+				type: { summary: "number | string" },
+				defaultValue: { summary: 160 },
+			},
+		},
+		height: {
+			control: "number",
+			description: "Height of the image (in pixels).",
+			defaultValue: 160,
+			table: {
+				type: { summary: "number | string" },
+				defaultValue: { summary: 160 },
+			},
+		},
+		imgClasses: {
+			control: "text",
+			description: "Additional Tailwind CSS classes to style the image.",
+			defaultValue: "w-40 h-40",
+			table: {
+				type: { summary: "string" },
+				defaultValue: { summary: "w-40 h-40" },
+			},
+		},
+	},
+};
 
-const Template: Story = (args, { argTypes }) => ({
+import type { StoryFn } from "@storybook/vue3";
+
+const Template: StoryFn = (args) => ({
 	components: { Logo },
-	props: Object.keys(argTypes),
-	template: '<Logo v-bind="$props" />',
+	setup() {
+		return { args };
+	},
+	template: '<Logo v-bind="args" />',
 });
 
 export const Default = Template.bind({});
 Default.args = {
-	// Add default props here
+	src: "/logo/logo.png",
+	alt: "Logo",
+	width: 160,
+	height: 160,
+	imgClasses: "w-40 h-40",
+};
+
+export const CustomLogo = Template.bind({});
+CustomLogo.args = {
+	src: "https://example.com/custom-logo.png",
+	alt: "Custom Logo",
+	width: 100,
+	height: 100,
+	imgClasses: "w-24 h-24",
 };
