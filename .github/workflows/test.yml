@@ -2,10 +2,10 @@ name: Test
 on:
   push:
     branches:
-      - "Solomon-Muhye" # Run tests when code is pushed to your individual branch
+      - "Solomon-Muhye"
   pull_request:
     branches:
-      - "**" # Continue running tests on pull requests for all branches
+      - "**"
 
 jobs:
   test:
@@ -21,9 +21,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "pnpm"
-          cache-dependency-path: |
-            pnpm-lock.yaml
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
