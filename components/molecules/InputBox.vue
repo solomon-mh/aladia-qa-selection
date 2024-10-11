@@ -1,34 +1,35 @@
+<!-- Input.vue -->
 <template>
 	<div>
-		<label
-			v-if="label"
-			class="block pointer-events-none my-2 p-2 rounded origin-left text-sm text-white/90 transition-all scale-100"
-		>
-			{{ label }}
-		</label>
-
+		<Label v-if="label" :label="label" />
 		<div
 			class="group relative flex h-10 w-full rounded transition-all bg-white"
 		>
-			<div v-if="icon" class="flex w-10 items-center justify-center text-xl">
-				<i :class="[icon, 'text-base text-black/70']"></i>
-			</div>
-			<input
-				:class="[
-					'h-full flex-1 rounded bg-transparent text-sm text-black outline-none transition-all',
-					inputClasses,
-				]"
+			<Icon v-if="icon" :icon="icon" />
+			<InputField
 				:autocomplete="autocomplete"
 				:type="type"
 				:placeholder="placeholder"
+				:model-value="modelValue"
+				:input-classes="inputClasses"
+				@update:modelValue="$emit('update:modelValue', $event)"
 			/>
 		</div>
 	</div>
 </template>
 
 <script>
+import Icon from "../atoms/Icon.vue";
+import InputField from "../atoms/InputField.vue";
+import Label from "../atoms/Label.vue";
+
 export default {
 	name: "Input",
+	components: {
+		Label,
+		Icon,
+		InputField,
+	},
 	props: {
 		icon: {
 			type: String,

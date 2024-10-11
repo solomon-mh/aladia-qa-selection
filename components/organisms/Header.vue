@@ -1,21 +1,20 @@
 <template>
-	<div
-		class="login-header-bg bg-opacity-25 flex mx-auto h-32 justify-center border-[1px] rounded border-gray-700 items-center"
-	>
-		<AtomsLogo
-			src="/logo/logo.png"
-			alt="Custom Logo"
-			width="100"
-			height="100"
-			imgClasses="w-24 h-24"
-		/>
-		<AtomsWelcomeMsg />
-	</div>
+	<header :class="headerClasses">
+		<slot />
+	</header>
 </template>
 
 <script>
 export default {
 	name: "Header",
+	props: {
+		// Header specific classes
+		headerClasses: {
+			type: String,
+			default:
+				"login-header-bg relative bg-opacity-25 flex mx-auto mb-2 h-32 justify-center border-[1px] rounded border-gray-700 items-center",
+		},
+	},
 };
 </script>
 

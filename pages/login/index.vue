@@ -1,26 +1,27 @@
 <script setup lang="ts">
-import SocialLoginCard from "../../components/molecules/SocialLoginCard.vue";
 import SubmitButton from "../../components/atoms/SubmitButton.vue";
-import TermsConditions from "../../components/atoms/TermsConditions.vue";
-import Input from "~/components/atoms/Input.vue";
+import InputBox from "~/components/molecules/InputBox.vue";
+import Header from "~/components/organisms/Header.vue";
 </script>
 
 <template>
 	<div
 		class="flex flex-col mt-8 h-[40rem] w-[26rem] py-3 mx-auto justify-center items-center border-[1px] border-y-gray-500 rounded p-[20px]"
 	>
+		<Header>
+			<AtomsLogo
+				src="/logo/logo.png"
+				logoAlt="Custom Logo"
+				logoWidth="100"
+				logoHeight="100"
+				img-classes="w-32 h-44 opacity-85"
+			/>
+			<MoleculesWelcomeMsg
+				title="Nice to Meet You,"
+				message="Upload a profile picture and complete your presentation."
+			/>
+		</Header>
 		<div>
-			<!-- sign-up header Section -->
-			<div
-				class="login-header-bg bg-opacity-25 flex mx-auto h-32 justify-center border-[1px] rounded border-gray-700 items-center"
-			>
-				<AtomsLogo />
-				<AtomsWelcomeMsg
-					title="Nice to Meet You"
-					message="Upload a profile picture and complete your presentation"
-				/>
-			</div>
-			<!-- Right Section -->
 			<div class="flex items-start mx-2 my-3">
 				<input
 					id="terms"
@@ -37,25 +38,26 @@ import Input from "~/components/atoms/Input.vue";
 			<div
 				class="w-full flex flex-col gap-2 mt-5 items-center rounded-lg shadow-xl"
 			>
-				<h1 class="font-semibold text-slate-400 mb-2 text-[14px]">
-					Enter your details
-				</h1>
+				<AtomsInfoBanner
+					info-txt="Enter your details"
+					custom-class="font-semibold text-slate-400 mb-2 text-[14px]"
+				/>
 				<form @submit.prevent class="flex flex-col w-[92%] max-w-md gap-6">
-					<Input
+					<InputBox
 						class="h-full flex-1 rounded bg-transparent text-sm text-black outline-none transition-all"
 						icon="fa-solid fa-user"
 						autocomplete="off"
 						placeholder="Name"
 						type="text"
 					/>
-					<Input
+					<InputBox
 						class="h-full flex-1 rounded bg-transparent text-sm text-black outline-none transition-all"
 						icon="fa-solid fa-user"
 						autocomplete="off"
 						placeholder="Surname"
 						type="text"
 					/>
-					<Input
+					<InputBox
 						class="h-full flex-1 rounded bg-transparent text-sm text-black outline-none transition-all"
 						icon="fa-solid fa-envelope"
 						value="solomo@gmail.com"
@@ -64,14 +66,14 @@ import Input from "~/components/atoms/Input.vue";
 						placeholder="solomo@gmail.com"
 						type="text"
 					/>
-					<Input
+					<InputBox
 						class="h-full flex-1 rounded bg-transparent text-sm text-black outline-none transition-all"
 						icon="fa-solid fa-key"
 						autocomplete="off"
 						placeholder="Password"
 						type="text"
 					/>
-					<Input
+					<InputBox
 						class="h-full flex-1 rounded bg-transparent text-sm text-black outline-none transition-all"
 						icon="fa-solid fa-key"
 						autocomplete="off"

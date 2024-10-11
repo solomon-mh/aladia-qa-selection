@@ -1,7 +1,7 @@
 <template>
 	<div class="flex-1">
 		<img
-			:class="['w-40 mb-4 h-40 object-contain', imgClasses]"
+			:class="['w-30 mb-4 h-30 object-contain', imgClasses]"
 			:src="src"
 			:alt="alt"
 			:width="width"
@@ -17,7 +17,7 @@ export default {
 		src: {
 			type: String,
 			required: true,
-			default: "/logo/logo.png",
+			// default: "/logo/logo.png",
 		},
 		alt: {
 			type: String,

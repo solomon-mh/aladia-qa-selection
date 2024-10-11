@@ -1,7 +1,8 @@
-import Input from "../components/atoms/Input.vue";
+import InputBox from "../components/molecules/InputBox.vue";
+
 export default {
-	title: "Components/atoms/Input",
-	component: Input,
+	title: "Components/Molecules/InputBox",
+	component: InputBox,
 	argTypes: {
 		icon: {
 			control: "text",

@@ -20,5 +20,5 @@ export default defineNuxtConfig({
 		},
 	},
 	future: {},
-	modules: ["@nuxt/image", "@nuxtjs/storybook"],
+	modules: ["@nuxt/image", "@nuxtjs/storybook", "@nuxtjs/tailwindcss"],
 });
