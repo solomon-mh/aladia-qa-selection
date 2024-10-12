@@ -6,9 +6,8 @@ export default defineConfig({
 			// implement node event listeners here
 		},
 		experimentalStudio: true,
+		baseUrl: "https://localhost:3000",
 	},
-	baseUrl: "https://localhost:3000",
-	chromeWebSecurity: false,
 	waitForAnimations: false,
 	animationDistanceThreshold: 50,
 	component: {
