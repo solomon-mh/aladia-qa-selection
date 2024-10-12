@@ -3,7 +3,7 @@
 	<div>
 		<Label v-if="label" :label="label" />
 		<div
-			class="group relative flex h-10 w-full rounded transition-all bg-white focus-within:bg-white/75"
+			class="group relative flex h-10 w-full rounded transition-all bg-white focus-within:bg-white/80"
 		>
 			<Icon v-if="icon" :icon="icon" />
 			<InputField

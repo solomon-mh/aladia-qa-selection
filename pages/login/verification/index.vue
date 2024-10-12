@@ -19,7 +19,7 @@ import WelcomeMsg from "~/components/molecules/WelcomeMsg.vue";
 						alt="Custom Logo"
 						width="200"
 						height="300"
-						imgClasses="w-44 h-auto mx-auto m-0"
+						imgClasses="w-44 h-auto mx-auto m-0 opacity-70"
 					/>
 				</div>
 				<WelcomeMsg title="Solomon Muhye" message="Thanks For Joining Us" />

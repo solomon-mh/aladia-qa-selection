@@ -2,6 +2,17 @@
 import SubmitButton from "../../components/atoms/SubmitButton.vue";
 import InputBox from "~/components/molecules/InputBox.vue";
 import Header from "~/components/organisms/Header.vue";
+import { useRoute } from "vue-router";
+
+const email = ref<string>("");
+const route = useRoute();
+
+onMounted(() => {
+	const emailFormQuery = route.query.email as string;
+	if (emailFormQuery) {
+		email.value = emailFormQuery ?? "test@gmail.com";
+	}
+});
 </script>
 
 <template>
@@ -61,10 +72,10 @@ import Header from "~/components/organisms/Header.vue";
 					<InputBox
 						class="h-full flex-1 rounded bg-transparent text-sm text-black outline-none transition-all"
 						icon="fa-solid fa-envelope"
-						value="solomo@gmail.com"
+						:value="email"
 						disabled="true"
 						autocomplete="off"
-						placeholder="solomo@gmail.com"
+						:placeholder="email ?? 'test@gmail.com'"
 						type="text"
 					/>
 					<InputBox

@@ -23,8 +23,10 @@ const config = {
 				lazyCompilation: true,
 			},
 		},
-
-		docs: "tag",
+		docs: {
+			autodocs: "tag",
+		},
+		staticDirs: ["../public"],
 	},
 };
 export default config;
