@@ -7,7 +7,8 @@ export default defineConfig({
 		},
 		experimentalStudio: true,
 	},
-
+	waitForAnimations: false,
+	animationDistanceThreshold: 50,
 	component: {
 		devServer: {
 			framework: "vue",

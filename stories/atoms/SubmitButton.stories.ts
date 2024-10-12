@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import SubmitButton from "../components/atoms/SubmitButton.vue";
+import SubmitButton from "../../components/atoms/SubmitButton.vue";
 
 const meta: Meta<typeof SubmitButton> = {
-	title: "Form/SubmitButton",
+	title: "Components/Atoms/SubmitButton",
 	component: SubmitButton,
 	tags: ["autodocs"],
 	argTypes: {

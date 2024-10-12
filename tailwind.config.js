@@ -6,9 +6,11 @@ export default {
 		"./pages/**/*.vue",
 		"./plugins/**/*.{js,ts}",
 		"./stories/**/*.{js,ts}",
+		"./*.{vue,js,ts,jsx,tsx}",
 		"./app.vue",
 		"./error.vue",
 	],
+	darkMode: ["class", '[data-mode="dark"]'],
 	theme: {
 		extend: {},
 	},

@@ -6,7 +6,6 @@
 </template>
 
 <script>
-// import AtomsWelcomeHeader from "~/components/atoms/AtomsWelcomeHeader.vue"; // Adjust path as necessary
 import WelcomeHeader from "../atoms/WelcomeHeader.vue";
 import WelcomeNote from "../atoms/WelcomeNote.vue";
 

@@ -5,9 +5,10 @@ import Header from "~/components/organisms/Header.vue";
 </script>
 
 <template>
-	<div
+	<!-- <div
 		class="flex flex-col mt-8 h-[40rem] w-[26rem] py-3 mx-auto justify-center items-center border-[1px] border-y-gray-500 rounded p-[20px]"
-	>
+	> -->
+	<TemplatesAuthCard>
 		<Header>
 			<AtomsLogo
 				src="/logo/logo.png"
@@ -84,7 +85,7 @@ import Header from "~/components/organisms/Header.vue";
 				</form>
 			</div>
 		</div>
-	</div>
+	</TemplatesAuthCard>
 </template>
 <style>
 .login-header {

@@ -1,4 +1,4 @@
-import Logo from "../components/atoms/Logo.vue";
+import Logo from "../../components/atoms/Logo.vue";
 export default {
 	title: "Components/Atoms/Logo",
 	component: Logo,

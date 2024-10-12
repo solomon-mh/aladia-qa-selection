@@ -3,13 +3,15 @@
 		class="flex cursor-pointer items-center justify-center gap-4 rounded border border-white/20 py-1.5 shadow-[0px_3px_6px_#00000000] transition-all hover:bg-white/20 hover:shadow-[0px_3px_6px_#000000] active:scale-95"
 		@click="handleClick"
 	>
-		<!-- Use NuxtImg for dynamic image handling -->
-		<NuxtImg :src="icon" class="h-6" />
-		<div class="w-40 text-white whitespace-nowrap">{{ text }}</div>
+		<BrandIcon :icon="icon" />
+		<BrandName :text="text" />
 	</div>
 </template>
 
 <script>
+import BrandIcon from "../atoms/BrandIcon.vue";
+import BrandName from "../atoms/BrandName.vue";
+
 export default {
 	name: "SocialLoginButton",
 	props: {
@@ -25,6 +27,10 @@ export default {
 			type: String,
 			default: "#",
 		},
+	},
+	components: {
+		BrandIcon,
+		BrandName,
 	},
 	methods: {
 		handleClick() {

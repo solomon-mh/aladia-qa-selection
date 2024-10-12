@@ -5,8 +5,11 @@ import WelcomeMsg from "~/components/molecules/WelcomeMsg.vue";
 </script>
 
 <template>
-	<div
-		class="flex flex-col mt-8 h-[30rem] w-[26rem] py-3 mx-auto justify-center items-center border-[1px] border-y-gray-500 rounded p-[20px]"
+	<!-- <div
+		class=""
+	> -->
+	<TemplatesAuthCard
+		custom-class="flex flex-col mt-8 h-[30rem] w-[26rem] py-3 mx-auto justify-center items-center border-[1px] border-y-gray-500 rounded p-[20px]"
 	>
 		<div class="text-white/80">
 			<div class="text-center flex flex-col items-center justify-center my-2">
@@ -38,7 +41,7 @@ import WelcomeMsg from "~/components/molecules/WelcomeMsg.vue";
 				</form>
 			</div>
 		</div>
-	</div>
+	</TemplatesAuthCard>
 </template>
 <style>
 .login-header {

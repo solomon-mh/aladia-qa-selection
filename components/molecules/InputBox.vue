@@ -3,7 +3,7 @@
 	<div>
 		<Label v-if="label" :label="label" />
 		<div
-			class="group relative flex h-10 w-full rounded transition-all bg-white"
+			class="group relative flex h-10 w-full rounded transition-all bg-white focus-within:bg-white/75"
 		>
 			<Icon v-if="icon" :icon="icon" />
 			<InputField
@@ -24,7 +24,7 @@ import InputField from "../atoms/InputField.vue";
 import Label from "../atoms/Label.vue";
 
 export default {
-	name: "Input",
+	name: "InputBox",
 	components: {
 		Label,
 		Icon,

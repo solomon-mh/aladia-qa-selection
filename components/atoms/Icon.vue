@@ -10,10 +10,11 @@ export default {
 		icon: {
 			type: String,
 			required: true, // The icon prop is required
+			default: "fa-solid fa-person",
 		},
 		iconWrapperClass: {
 			type: String,
-			default: "flex w-10 items-center justify-center text-xl",
+			default: "flex w-10 items-center justify-center opacity-70 text-xl",
 		},
 		iconClass: {
 			type: String,

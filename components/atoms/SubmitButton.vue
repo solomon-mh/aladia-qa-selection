@@ -1,7 +1,7 @@
 <template>
 	<div
 		:class="[
-			'relative login-header flex items-center justify-center overflow-hidden rounded-md text-center text-sm border',
+			'relative login-header flex items-center justify-center overflow-hidden rounded-md text-center text-sm border border-transparent hover:border-gray-500 transition-all duration-300',
 			borderColor,
 			bgColor,
 			sizeClass, // Dynamically apply the size class
@@ -80,7 +80,9 @@ export default {
 		rgba(6, 6, 6, 0.5),
 		rgba(6, 6, 6, 0.5),
 		rgba(97, 96, 99, 0.5),
-		rgba(6, 6, 6, 0.5)
+		rgba(6, 6, 6, 0.5),
+		rgba(97, 96, 99, 0.5),
+		rgba(6, 6, 6, 0.5) rgba(6, 6, 6, 0.5)
 	);
 }
 

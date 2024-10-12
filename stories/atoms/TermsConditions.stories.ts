@@ -2,10 +2,10 @@
 
 // TermsConditions.stories.ts
 import type { Meta, StoryFn } from "@storybook/vue3";
-import TermsConditions from "../components/atoms/TermsConditions.vue";
+import TermsConditions from "../../components/atoms/TermsConditions.vue";
 
 export default {
-	title: "Components/TermsConditions",
+	title: "Components/Atoms/TermsConditions",
 	component: TermsConditions,
 } as Meta<typeof TermsConditions>;
 

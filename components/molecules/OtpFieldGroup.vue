@@ -16,7 +16,7 @@ import { AtomsInputField } from '../../.nuxt/components';
 import InputField from "../atoms/InputField.vue";
 
 export default {
-	name: "OtpInputFields",
+	name: "OptFieldGroup",
 	components: {
 		InputField,
 	},
