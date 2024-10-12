@@ -1,0 +1,42 @@
+name: Chromatic Deployement
+
+on:
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  chromatic:
+    name: Run Chromatic
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+        #   NODE MODULE CACHING
+      #   - name: Cache Node.js modules
+      #     uses: actions/cache@v3
+      #     with:
+      #       path: ~/.npm
+      #       key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      #       restore-keys: |
+      #         ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          # chpt_60b586aecf6072d -  CHROMATIC TOKEN
+          projectToken: "chpt_60b586aecf6072d"
+          exitZeroOnChanges: true
+          onlyChanged: true
+          zip: true

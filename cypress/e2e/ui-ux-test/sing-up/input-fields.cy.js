@@ -1,3 +1,4 @@
+import "@percy/cypress";
 /* ==== Test Created with Cypress Studio ==== */
 it("Signup Page Tests", function () {
 	/* ==== Generated with Cypress Studio ==== */
@@ -49,5 +50,9 @@ it("Signup Page Tests", function () {
 		"have.text",
 		" Terms & Conditions "
 	);
+	// Capture a visual snapshot
+	// TODO - add the function below after
+	// cy.percySnapshot("Signup Page Snapshot");
 	/* ==== End Cypress Studio ==== */
+	// set PERCY_TOKEN=web_aa352c6c419b6374144724c301d6c89b788e989b71da0418a43588bc36cc651d
 });
