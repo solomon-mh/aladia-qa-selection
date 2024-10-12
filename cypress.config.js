@@ -7,6 +7,8 @@ export default defineConfig({
 		},
 		experimentalStudio: true,
 	},
+	baseUrl: "https://localhost:3000",
+	chromeWebSecurity: false,
 	waitForAnimations: false,
 	animationDistanceThreshold: 50,
 	component: {
