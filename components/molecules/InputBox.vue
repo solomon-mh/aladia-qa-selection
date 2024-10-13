@@ -9,6 +9,7 @@
 			<InputField
 				:autocomplete="autocomplete"
 				:type="type"
+				:disabled="disabled"
 				:placeholder="placeholder"
 				:model-value="modelValue"
 				:input-classes="inputClasses"
@@ -58,6 +59,10 @@ export default {
 		inputClasses: {
 			type: String,
 			default: "",
+		},
+		disabled: {
+			type: Boolean,
+			default: false,
 		},
 	},
 	emits: ["update:modelValue"],

@@ -141,6 +141,7 @@ const handleSubmit = (e: any) => {
 						icon="fa-solid fa-envelope"
 						readonly
 						autocomplete="off"
+						:disabled="email.length > 0"
 						placeholder="solomon.muhye.wd@gmail.com"
 						type="text"
 						v-model="email"

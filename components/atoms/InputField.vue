@@ -7,6 +7,7 @@
 		]"
 		:autocomplete="autocomplete"
 		:type="type"
+		:disabled="disabled"
 		:placeholder="placeholder"
 		:value="modelValue"
 		:maxlength="maxLength"

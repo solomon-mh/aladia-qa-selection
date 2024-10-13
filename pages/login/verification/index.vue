@@ -2,7 +2,7 @@
 import SubmitButton from "~/components/atoms/SubmitButton.vue";
 import OtpFieldGroup from "~/components/molecules/OtpFieldGroup.vue";
 import WelcomeMsg from "~/components/molecules/WelcomeMsg.vue";
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 const otpValue = ref(""); // Store OTP value
 const errorMessage = ref(""); // Store error message
@@ -19,6 +19,9 @@ const verifyOtp = () => {
 		errorMessage.value = "Please enter all 6 digits.";
 	}
 };
+
+// Computed property to check if all OTP fields are filled
+const isOtpComplete = computed(() => otpValue.value.length === 6);
 </script>
 
 <template>
@@ -56,7 +59,8 @@ const verifyOtp = () => {
 					@submit.prevent="verifyOtp"
 					class="flex flex-col w-[92%] max-w-md gap-2"
 				>
-					<SubmitButton button-text="Enter" />
+					<SubmitButton button-text="Enter" :disabled="!isOtpComplete" />
+					<!-- Disable button if OTP is not complete -->
 				</form>
 			</div>
 		</div>
