@@ -35,4 +35,10 @@ it('login-page-test', function() {
   cy.get('.gap-2 > .font-semibold').click();
   cy.get('.gap-2 > .font-semibold').should('have.text', 'Enter your details');
   /* ==== End Cypress Studio ==== */
+  /* ==== Generated with Cypress Studio ==== */
+  cy.get('.min-h-screen').click();
+  cy.get('.items-start').should('be.visible');
+  cy.get('[data-v-inspector="pages/login/index.vue:45:6"]').should('have.text', 'Terms & Conditions');
+  cy.get('[data-v-inspector="pages/login/index.vue:47:6"]').should('have.text', 'Privacy Policy');
+  /* ==== End Cypress Studio ==== */
 });
