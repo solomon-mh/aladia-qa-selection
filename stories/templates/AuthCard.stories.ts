@@ -48,7 +48,7 @@ export const DifferentContent = {
 		template: `
       <AuthCard>
         <h2 class="text-xl font-bold">Create Account</h2>
-        <p class="text-gray-600">Join us today and enjoy exclusive benefits.</p>
+        <p class="text-gray-600">Join us today and enjoy learning with Aladia E-learning.</p>
       </AuthCard>
     `,
 	}),

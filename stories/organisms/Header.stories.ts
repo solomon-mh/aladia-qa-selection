@@ -9,10 +9,15 @@ export default {
 			control: "text",
 			description: "Custom CSS classes for styling the header",
 		},
+		logoSrc: {
+			control: "text",
+			description: "The URL or path to the logo image",
+		},
 	},
 	args: {
 		headerClasses:
-			"login-header-bg relative bg-opacity-25 flex mx-auto mb-2 h-32 justify-center border-[1px] rounded border-gray-700 items-center",
+			"login-header-bg relative bg-opacity-25 flex mx-auto mb-2 h-32 justify-between border-[1px] rounded border-gray-700 items-center",
+		logoSrc: "https://via.placeholder.com/150", // Default logo
 	},
 };
 
@@ -20,8 +25,7 @@ export default {
 export const Primary = {
 	args: {
 		headerClasses:
-			"login-header-bg relative bg-opacity-25 flex mx-auto mb-2 h-32 justify-center border-[1px] rounded border-gray-700 items-center",
-		// Slot content can be added here if needed
+			"login-header-bg relative bg-opacity-25 flex mx-auto mb-2 h-32 justify-between border-[1px] rounded border-gray-700 items-center",
 	},
 };
 
@@ -29,7 +33,8 @@ export const Primary = {
 export const CustomStyle = {
 	args: {
 		headerClasses:
-			"bg-blue-500 text-white flex items-center justify-center h-32 rounded",
+			"bg-blue-500 text-white flex items-center justify-between h-32 rounded",
+		logoSrc: "https://via.placeholder.com/150", // Example logo
 	},
 };
 
@@ -37,6 +42,6 @@ export const CustomStyle = {
 export const NoCustomClass = {
 	args: {
 		headerClasses: "",
-		// Slot content can be added here if needed
+		logoSrc: "https://via.placeholder.com/150", // Example logo
 	},
 };

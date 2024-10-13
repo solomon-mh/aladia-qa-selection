@@ -1,5 +1,5 @@
 <template>
-	<div class="w-40 text-white whitespace-nowrap">{{ text }}</div>
+	<div :class="textColor" class="w-40 whitespace-nowrap">{{ text }}</div>
 </template>
 
 <script>
@@ -9,6 +9,15 @@ export default {
 		text: {
 			type: String,
 			required: true,
+		},
+		color: {
+			type: String,
+			default: "text-white", // Default to white
+		},
+	},
+	computed: {
+		textColor() {
+			return this.color; // Use the color prop to set the class
 		},
 	},
 };

@@ -1,84 +1,86 @@
-import { fn } from "@storybook/test";
 import InputBox from "../../components/molecules/InputBox.vue";
 
 export default {
-	title: "Components/molecules/InputBox",
+	title: "Components/Molecules/InputBox",
 	component: InputBox,
 	tags: ["autodocs"],
 	argTypes: {
 		icon: {
 			control: "text",
-			description: "Icon path or URL to display inside the input field",
+			description:
+				"The URL or path to the icon image displayed inside the input box.",
 		},
 		label: {
 			control: "text",
-			description: "Text for the input field label",
+			description: "Label text for the input field.",
 		},
 		type: {
-			control: { type: "select" },
-			options: ["text", "password", "email", "number"],
-			description: "The type of input field",
+			control: { type: "select", options: ["text", "email", "password"] },
+			description: "Type of the input field.",
 		},
 		autocomplete: {
-			control: { type: "select" },
-			options: ["on", "off"],
-			description: "Autocomplete behavior of the input",
+			control: "text",
+			description: "Autocomplete attribute for the input field.",
 		},
 		placeholder: {
 			control: "text",
-			description: "Placeholder text for the input field",
+			description: "Placeholder text for the input field.",
 		},
 		modelValue: {
 			control: "text",
-			description: "The bound value for the input field",
+			description: "Current value of the input field.",
 		},
 		inputClasses: {
 			control: "text",
-			description: "Additional CSS classes for styling the input field",
+			description: "Additional CSS classes for styling the input field.",
 		},
 	},
 	args: {
-		icon: "",
+		icon: "https://cdn-icons-png.flaticon.com/512/733/733609.png", // Example icon (GitHub)
 		label: "Username",
 		type: "text",
 		autocomplete: "off",
-		placeholder: "Enter your username",
+		placeholder: "Enter your username...",
 		modelValue: "",
-		inputClasses: "",
+		inputClasses: "border rounded-md p-2",
 	},
 };
 
-// Primary story
-export const Primary = {
+// Default story for InputBox
+export const Default = {
+	args: {},
+};
+
+// InputBox with a different icon
+export const WithDifferentIcon = {
 	args: {
-		label: "Username",
-		placeholder: "Enter your username",
+		icon: "https://cdn-icons-png.flaticon.com/512/124/124010.png", // Facebook icon
 	},
 };
 
-// With Icon story
-export const WithIcon = {
+// InputBox with custom placeholder and label
+export const WithCustomLabelAndPlaceholder = {
 	args: {
-		label: "Search",
-		icon: "https://via.placeholder.com/20",
-		placeholder: "Search here...",
+		label: "Email",
+		placeholder: "Enter your email address...",
+		type: "email",
 	},
 };
 
-// Password Input story
-export const Password = {
+// InputBox for password input
+export const PasswordInput = {
 	args: {
 		label: "Password",
 		type: "password",
-		placeholder: "Enter your password",
+		placeholder: "Enter your password...",
 	},
 };
 
-// Email Input story
-export const Email = {
+// InputBox with different autocomplete options
+export const WithAutocomplete = {
 	args: {
-		label: "Email",
-		type: "email",
-		placeholder: "Enter your email address",
+		label: "Search",
+		autocomplete: "on",
+		placeholder: "Search...",
 	},
 };

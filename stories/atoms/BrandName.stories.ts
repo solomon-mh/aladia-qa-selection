@@ -10,9 +10,23 @@ export default {
 			control: "text",
 			description: "The text content displayed by the BrandName component",
 		},
+		color: {
+			control: {
+				type: "select",
+				options: [
+					"text-white",
+					"text-black",
+					"text-red-500",
+					"text-green-500",
+					"text-blue-500",
+				],
+			},
+			description: "Text color of the BrandName component",
+		},
 	},
 	args: {
 		text: "Default Brand Name",
+		color: "text-black", // Default color
 	},
 };
 
@@ -20,6 +34,7 @@ export default {
 export const Primary = {
 	args: {
 		text: "BrandName - Primary",
+		color: "text-black",
 	},
 };
 
@@ -27,6 +42,7 @@ export const Primary = {
 export const LongText = {
 	args: {
 		text: "This is a long brand name that demonstrates text wrapping behavior",
+		color: "text-green-500",
 	},
 };
 
@@ -34,5 +50,6 @@ export const LongText = {
 export const EmptyText = {
 	args: {
 		text: "",
+		color: "text-red-500",
 	},
 };

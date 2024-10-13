@@ -88,7 +88,7 @@ const handleSubmit = () => {
 					<SocialLogin icon="/brand/fb.svg" text="Continue with Facebook" />
 					<SocialLogin icon="/brand/apple.svg" text="Continue with Apple" />
 				</SocialLoginCard>
-				<TermsConditions />
+				<TermsConditions class="text-white/60" />
 			</div>
 		</div>
 	</TemplatesAuthCard>
