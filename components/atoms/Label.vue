@@ -1,21 +1,36 @@
-<!-- Label.vue -->
 <template>
 	<label
 		v-if="label"
-		class="block pointer-events-none my-2 p-2 rounded origin-left text-sm text-white/90 transition-all scale-100"
+		:class="classes"
+		:style="style"
+		class="block pointer-events-none my-2 p-2 rounded origin-left text-sm text-white/90 transition-all"
+		@click="onClick"
 	>
 		{{ label }}
 	</label>
 </template>
 
-<script>
-export default {
-	name: "Label",
-	props: {
-		label: {
-			type: String,
-			required: true, // Set to true if the label is mandatory
-		},
-	},
-};
+<script lang="ts" setup>
+import { computed } from "vue";
+
+// Define props with TypeScript
+const props = defineProps<{
+	label: string;
+	primary?: boolean;
+	size?: "small" | "medium" | "large";
+	backgroundColor?: string;
+}>();
+
+// Computed class object based on props
+const classes = computed(() => ({
+	"storybook-button": true,
+	"storybook-button--primary": props.primary,
+	"storybook-button--secondary": !props.primary,
+	[`storybook-button--${props.size || "medium"}`]: true,
+}));
+
+// Computed style object based on props
+const style = computed(() => ({
+	backgroundColor: props.backgroundColor,
+}));
 </script>

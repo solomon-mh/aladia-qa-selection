@@ -9,7 +9,7 @@ import WelcomeMsg from "~/components/molecules/WelcomeMsg.vue";
 		class=""
 	> -->
 	<TemplatesAuthCard
-		custom-class="flex flex-col mt-8 h-[30rem] w-[26rem] py-3 mx-auto justify-center items-center border-[1px] border-y-gray-500 rounded p-[20px]"
+		custom-class="flex flex-col mt-8 h-[30rem] w-[100%] sm:w-[26rem] py-3 mx-auto justify-center items-center border-[1px] border-y-gray-500 rounded p-[20px]"
 	>
 		<div class="text-white/80">
 			<div class="text-center flex flex-col items-center justify-center my-2">

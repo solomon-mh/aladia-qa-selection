@@ -72,7 +72,7 @@ Default.args = {
 
 export const CustomLogo = Template.bind({});
 CustomLogo.args = {
-	src: "https://example.com/custom-logo.png",
+	src: "https://develop.aladia.io/_nuxt/image.ChQ3biW9.png",
 	alt: "Custom Logo",
 	width: 100,
 	height: 100,
