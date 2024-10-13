@@ -84,21 +84,9 @@ const handleSubmit = () => {
 
 			<div class="singing-opt w-[92%] space-y-2">
 				<SocialLoginCard>
-					<SocialLogin
-						icon="/brand/google.svg"
-						text="Continue with Google"
-						link="/google-login"
-					/>
-					<SocialLogin
-						icon="/brand/fb.svg"
-						text="Continue with Facebook"
-						link="/facebook-login"
-					/>
-					<SocialLogin
-						icon="/brand/apple.svg"
-						text="Continue with Apple"
-						link="/apple-login"
-					/>
+					<SocialLogin icon="/brand/google.svg" text="Continue with Google" />
+					<SocialLogin icon="/brand/fb.svg" text="Continue with Facebook" />
+					<SocialLogin icon="/brand/apple.svg" text="Continue with Apple" />
 				</SocialLoginCard>
 				<TermsConditions />
 			</div>

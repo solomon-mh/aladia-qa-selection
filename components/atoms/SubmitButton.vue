@@ -10,6 +10,7 @@
 		<div :class="['gradient absolute inset-0', gradientColor]"></div>
 		<!-- The button text and click handler are now passed as props -->
 		<button
+			:type="button"
 			:class="[textColor, 'cursor-pointer relative z-10']"
 			@click="handleClick"
 		>
@@ -67,7 +68,7 @@ export default {
 	methods: {
 		handleClick(event) {
 			this.onClick(event);
-			this.$router.push(this.path);
+			// this.$router.push(this.path);
 		},
 	},
 };

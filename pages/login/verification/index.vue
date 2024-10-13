@@ -2,12 +2,26 @@
 import SubmitButton from "~/components/atoms/SubmitButton.vue";
 import OtpFieldGroup from "~/components/molecules/OtpFieldGroup.vue";
 import WelcomeMsg from "~/components/molecules/WelcomeMsg.vue";
+import { ref } from "vue";
+
+const otpValue = ref(""); // Store OTP value
+const errorMessage = ref(""); // Store error message
+
+const handleOtpChange = (value: string) => {
+	otpValue.value = value;
+};
+
+const verifyOtp = () => {
+	if (otpValue.value.length === 6) {
+		alert("Verified!");
+		errorMessage.value = ""; // Clear any previous errors
+	} else {
+		errorMessage.value = "Please enter all 6 digits.";
+	}
+};
 </script>
 
 <template>
-	<!-- <div
-		class=""
-	> -->
 	<TemplatesAuthCard
 		custom-class="flex flex-col mt-8 h-[30rem] w-[100%] sm:w-[26rem] py-3 mx-auto justify-center items-center border-[1px] border-y-gray-500 rounded p-[20px]"
 	>
@@ -25,29 +39,26 @@ import WelcomeMsg from "~/components/molecules/WelcomeMsg.vue";
 				<WelcomeMsg title="Solomon Muhye" message="Thanks For Joining Us" />
 			</div>
 			<AtomsInfoBanner
-				info-txt="Please enter below the 6-digit code we sent you through your
-				registration e-mail:"
+				info-txt="Please enter below the 6-digit code we sent you through your registration e-mail:"
 				custom-class="verify-msg text-center"
 			/>
 
 			<div
 				class="w-full flex flex-col gap-2 mt-5 items-center rounded-lg shadow-xl"
 			>
-				<div class="six-box flex gap-[5px] my-3">
-					<OtpFieldGroup />
+				<div class="text-center mb-2">
+					<div class="six-box flex gap-[5px]">
+						<OtpFieldGroup @otp-change="handleOtpChange" />
+					</div>
+					<p v-if="errorMessage" class="text-red-500">{{ errorMessage }}</p>
 				</div>
-				<form class="flex flex-col w-[92%] max-w-md gap-6">
+				<form
+					@submit.prevent="verifyOtp"
+					class="flex flex-col w-[92%] max-w-md gap-2"
+				>
 					<SubmitButton button-text="Enter" />
 				</form>
 			</div>
 		</div>
 	</TemplatesAuthCard>
 </template>
-<style>
-.login-header {
-	background: url("/bg/bg.png");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	object-fit: cover;
-}
-</style>
